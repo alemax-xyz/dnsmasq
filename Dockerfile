@@ -39,6 +39,8 @@ RUN rm -rf \
         var \
     echo > /etc/dnsmasq.conf
 
+COPY init/ etc/init/
+
 WORKDIR /
 
 
@@ -47,7 +49,5 @@ FROM clover/base
 ENV LANG=C.UTF-8
 
 COPY --from=build /rootfs /
-
-CMD ["dnsmasq", "-k"]
 
 EXPOSE 53
