@@ -1,3 +1,3 @@
 #!/bin/sh
 
-dnsmasq --no-daemon --log-queries
+exec dnsmasq --no-daemon --log-queries
