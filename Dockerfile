@@ -1,4 +1,4 @@
-FROM library/ubuntu:bionic AS build
+FROM library/ubuntu:focal AS build
 
 ENV LANG=C.UTF-8
 RUN export DEBIAN_FRONTEND=noninteractive \
@@ -13,10 +13,10 @@ RUN apt-get download \
         dnsmasq \
         dnsmasq-base-lua \
         libgmp10 \
-        libhogweed4 \
+        libhogweed5 \
         libidn11 \
         libnetfilter-conntrack3 \
-        libnettle6 \
+        libnettle7 \
         libdbus-1-3 \
         liblua5.2-0 \
         libmnl0 \
